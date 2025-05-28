@@ -297,7 +297,7 @@ function Page() {
               while brainstorming my next project.
             </p>
             <h1 className="text-3xl mb-5 lg:md-20">TECHNOLOGIES</h1>
-            <div className="">
+            <div className="h-[6.5em]">
               {!toolsLoaded ? (
                 <p className="h-[100px]"></p>
               ) : (

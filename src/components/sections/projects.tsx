@@ -10,6 +10,8 @@ import {
 } from "../ui/animated-modal";
 import { FloatingDock } from "../ui/floating-dock";
 import Link from "next/link";
+import { useModal } from "../ui/animated-modal";
+
 
 import SmoothScroll from "../smooth-scroll";
 import projects, { Project } from "@/data/projects";
@@ -37,6 +39,26 @@ const ProjectsSection = () => {
     </section>
   );
 };
+
+const ModalFooterWithCancel = ({ liveUrl }: { liveUrl: string }) => {
+  const { setOpen } = useModal();
+  return (
+    <div className="gap-4 flex justify-center mb-4">
+      <button
+        className="px-2 py-1 bg-gray-200 text-black dark:bg-red-900 dark:border-black dark:text-white border border-gray-300 rounded-md text-sm w-28"
+        onClick={() => setOpen(false)}
+      >
+        Cancel
+      </button>
+      <Link href={liveUrl} target="_blank">
+        <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
+          Visit
+        </button>
+      </Link>
+    </div>
+  );
+};
+
 const Modall = ({ project }: { project: Project }) => {
   return (
     <div className="flex items-center justify-center">
@@ -69,17 +91,9 @@ const Modall = ({ project }: { project: Project }) => {
               <ProjectContents project={project} />
             </ModalContent>
           </SmoothScroll>
-          <ModalFooter className="gap-4">
-            <button className="px-2 py-1 bg-gray-200 text-black dark:bg-black dark:border-black dark:text-white border border-gray-300 rounded-md text-sm w-28">
-              Cancel
-            </button>
-            <Link href={project.live} target="_blank">
-              <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
-                Visit
-              </button>
-            </Link>
-          </ModalFooter>
+          <ModalFooterWithCancel liveUrl={project.live} />
         </ModalBody>
+
       </Modal>
     </div>
   );
