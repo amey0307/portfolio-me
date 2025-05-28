@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils";
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="max-w-7xl mx-auto md:h-[130vh]">
+    <section id="projects" className="max-w-[80vw] mx-auto md:h-[130vh]">
       <Link href={"#projects"}>
         <h2
           className={cn(
@@ -29,7 +29,7 @@ const ProjectsSection = () => {
           Projects
         </h2>
       </Link>
-      <div className="grid grid-cols-1 md:grid-cols-3">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 backdrop-blur-sm rounded-lg">
         {projects.map((project, index) => (
           <Modall key={project.src} project={project} />
         ))}
@@ -41,17 +41,17 @@ const Modall = ({ project }: { project: Project }) => {
   return (
     <div className="flex items-center justify-center">
       <Modal>
-        <ModalTrigger className="bg-transparent flex justify-center group/modal-btn">
+        <ModalTrigger className="bg-transparent flex justify-center group/modal-btn ">
           <div
-            className="relative w-[400px] h-auto rounded-lg overflow-hidden"
-            style={{ aspectRatio: "3/2" }}
+            className="relative w-[400px] h-auto rounded-lg overflow-hidden perspective-dramatic"
+            style={{ aspectRatio: "3/3" }}
           >
             <Image
-              className="absolute w-full h-full top-0 left-0 hover:scale-[1.05] transition-all"
+              className="absolute w-full h-full top-0 left-0 hover:scale-[1.05] rotate-x-0 translate-z-12 transition-all object-cover"
               src={project.src}
               alt={project.title}
-              width={300}
-              height={300}
+              width={900}
+              height={900}
             />
             <div className="absolute w-full h-1/2 bottom-0 left-0 bg-gradient-to-t from-black via-black/85 to-transparent pointer-events-none">
               <div className="flex flex-col h-full items-start justify-end p-6">

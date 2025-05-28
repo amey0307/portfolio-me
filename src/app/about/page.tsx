@@ -245,9 +245,9 @@ function Page() {
             <div className="flex flex-row lg:flex-col items-center">
               <div className="flex justify-center items-center lg:w-full lg:aspect-square bg-zinc-800 rounded-xl lg:mb-5">
                 <img
-                  className="rounded-full p-4 lg:p-10 w-[100px] md:w-[150px] lg:w-[200px] aspect-square  bg-zinc-800"
+                  className="rounded-full p-4 lg:p-4 w-[100px] md:w-[150px] lg:w-[200px] aspect-square bg-zinc-800"
                   alt="me"
-                  src="/assets/me.jpg"
+                  src="/assets/me.png"
                 />
               </div>
               <div className="flex flex-col gap-3 lg:items-center ml-10 md:ml-20 lg:ml-0">
@@ -282,7 +282,7 @@ function Page() {
         </aside>
         <main className="basis-3/4 w-[500px]">
           <div
-            className="p-10 border-[.5px] rounded-md border-zinc-600 h-[65vh]"
+            className="p-10 border-[.5px] rounded-md border-zinc-600"
             style={{ backdropFilter: "blur(2px)" }}
           >
             <h1 className="text-3xl mb-10 lg:md-20">ABOUT ME</h1>

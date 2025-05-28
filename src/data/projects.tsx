@@ -36,6 +36,7 @@ import {
   SiArduino,
 } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
+import placeholder from "../../public/assets/projects-screenshots/placeholder.png"
 import css from "styled-jsx/css";
 const BASE_PATH = "/assets/projects-screenshots";
 
@@ -305,14 +306,81 @@ export type Project = {
   live: string;
 };
 const projects: Project[] = [
-  {
-    id: "aidockerfileoptimizer",
+  { // 01. Ableton MCP Server project
+    id: "1",
+    category: "Model Context Protocol(MCP) | Python",
+    title: "Ableton MCP Server",
+    src: "/assets/projects-screenshots/abletonmcp/1.png",
+    screenshots: ["/assets/projects-screenshots/placeholder.png"],
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.html,
+        PROJECT_SKILLS.css,
+        PROJECT_SKILLS.js,
+        PROJECT_SKILLS.bootstrap,
+      ],
+      backend: [
+        PROJECT_SKILLS.java,
+        PROJECT_SKILLS.maven,
+        PROJECT_SKILLS.postgres,
+      ],
+    },
+    live: "#",
+    github: "#",
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono text-2xl text-center">
+            Ableton MCP Server
+          </TypographyP>
+          <TypographyP className="font-mono ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo sed iusto aliquam quia ipsum eos minima beatae quisquam, natus est, neque delectus adipisci velit molestiae laboriosam suscipit eaque provident inventore, quae nesciunt. Est dignissimos quibusdam quasi dicta minus assumenda.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <TypographyH3 className="my-4 mt-8">ℹ About Project </TypographyH3>
+          <p className="font-mono mb-4">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio alias, accusamus maxime provident porro autem consequuntur voluptatum, illum dolor magnam non nam vel recusandae aliquam quaerat dicta odit nostrum ipsum?<br />
+            1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolorem! <br />
+            2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolorem! <br />
+            3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, laborum.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/placeholder.png`,
+              `${BASE_PATH}/placeholder.png`,
+            ]}
+          />
+          <TypographyH3 className="my-4 mt-8">🔗 How did I connect</TypographyH3>
+          <p className="font-mono mb-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet a nesciunt perspiciatis incidunt at molestiae veniam autem maiores ea, fugit, modi provident est earum similique. Animi nam quidem, nesciunt fugiat odit ipsam consectetur tempora sed, eum ipsa tempore? Iusto, iste id numquam nostrum possimus placeat voluptates veritatis consequatur odit et at soluta distinctio facilis officiis earum aliquam modi dolores inventore ea laboriosam cupiditate quae harum. Molestiae aliquid quaerat voluptas provident, accusantium ad. Esse minima dolore, molestias in praesentium vitae maxime. Dolorem, voluptatum deserunt. Odio eos sunt quasi veniam, dolor, natus fugit voluptatem rem nemo ipsa voluptatibus, obcaecati iure suscipit eligendi.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/placeholder.png`,
+              `${BASE_PATH}/placeholder.png`,
+            ]}
+          />
+          <TypographyH3 className="my-4 mt-8">❓ Why this project</TypographyH3>
+
+          <p className="font-mono mb-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore aut officia id corrupti amet dolore quibusdam totam ullam culpa nemo blanditiis at voluptates modi autem similique possimus animi, sapiente dicta repellendus voluptatibus. Velit ab excepturi corrupti repellendus nemo praesentium sit porro impedit repudiandae! Reiciendis aut officia obcaecati beatae perferendis in vero iure aliquam quibusdam, laudantium expedita esse consequatur debitis nesciunt doloremque veniam. Nihil commodi sapiente quis possimus placeat harum voluptas perspiciatis recusandae praesentium quibusdam, repellendus iure eaque, soluta officia ratione atque nisi sint nulla dolorum. Animi nesciunt magni laboriosam. Quae..
+          </p>
+          <TypographyH3 className="my-4 mt-8">📖 What did I learn </TypographyH3>
+          <p className="font-mono mb-2">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid atque explicabo ipsa. Nulla, ut fugit. Quia quasi commodi nesciunt natus sapiente, excepturi ipsa nostrum ad hic. Odit fugiat ratione ducimus.
+          </p>
+        </div>
+      );
+    },
+  },
+  { // 02. AI Dockerfile Optimizer project
+    id: "2",
     category: "AI and DevOps",
     title: "AI Dockerfile Optimizer",
-    src: "/assets/projects-screenshots/aidockerfileoptimizer/2.png",
+    src: "/assets/projects-screenshots/aidockerfileoptimizer/thumbnail.png",
     screenshots: ["1.png", "2.png", "3.png"],
-    live: "https://ai-docker-file-optimizer.netlify.app/",
-    github: "https://github.com/Abhiz2411/AI-Docker-file-optimizer",
+    live: "https://ai-docker-file-optimizer.vercel.app/",
+    github: "https://github.com/amey0307/AI-Dockerfile-Analyzer-",
     skills: {
       frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
       backend: [PROJECT_SKILLS.openai, PROJECT_SKILLS.netlify],
@@ -338,108 +406,14 @@ const projects: Project[] = [
       );
     },
   },
-  { // 02. FinanceMe project
-    id: "financeme",
-    category: "DevOps in Banking and Finance",
-    title: "Fan-link: Connecting Fans and Musicians",
-    src: "/assets/projects-screenshots/financeme/1.png",
-    screenshots: ["/assets/projects-screenshots/financeme/1.png"],
-    skills: {
-      frontend: [
-        PROJECT_SKILLS.html,
-        PROJECT_SKILLS.css,
-        PROJECT_SKILLS.js,
-        PROJECT_SKILLS.bootstrap,
-      ],
-      backend: [
-        PROJECT_SKILLS.java,
-        PROJECT_SKILLS.maven,
-        PROJECT_SKILLS.postgres,
-      ],
-    },
-    live: "https://github.com/Abhiz2411/FinanceMe-Devops-Project-01",
-    github: "https://github.com/Abhiz2411/FinanceMe-Devops-Project-01",
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono text-2xl text-center">
-            FinanceMe: Complete DevOps Capstone Project
-          </TypographyP>
-          <TypographyP className="font-mono ">
-            This project demonstrates the deployment of a DevOps pipeline for a global banking and
-            financial services provider, FinanceMe. The company transitioned from a monolithic
-            architecture to a microservice-based architecture to handle increased traffic and
-            scaling challenges. The project involves automating infrastructure provisioning, build
-            and deployment processes, and continuous monitoring using modern DevOps tools and
-            AWS services.?
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">Architecture </TypographyH3>
-          <p className="font-mono mb-2">
-            The project is divided into three main phases:
-            1.Automating Infrastructure Provisioning
-            2.Build and Deployment Automation
-            3.Continuous Monitoring
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/financeme/1.png`,
-              `${BASE_PATH}/financeme/2.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Automating Infrastructure Provisioning</TypographyH3>
-          <p className="font-mono mb-2">
-            Terraform is used to create 4 AWS EC2 instances:
-            Jenkins Master Node (for CI/CD pipeline management)
-            Build Server (for application and Docker image builds)
-            Production Server (for deploying Dockerized applications)
-            Monitoring Server (for continuous monitoring of Build and Prod servers)
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/financeme/4_A.png`,
-              `${BASE_PATH}/financeme/4.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Build and Deployment Automation</TypographyH3>
-
-          <p className="font-mono mb-2">
-            Jenkins is configured for a CI/CD pipeline:
-            Jenkins Master Node is responsible for pipeline orchestration.
-            Build Server is configured as a Jenkins Slave Node to handle application builds and Docker image creation.
-            Ansible is used for automating deployment to the Prod server, where the application is deployed using an Ansible client-server model.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/financeme/5.png`,
-              `${BASE_PATH}/financeme/6.png`,
-              `${BASE_PATH}/financeme/7.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Continuous Monitoring </TypographyH3>
-          <p className="font-mono mb-2">
-            Prometheus and Grafana are used for real-time monitoring:
-            Node Exporter is installed on both Build and Prod servers to collect server metrics (CPU, Disk Space, Memory Utilization).
-            Grafana Dashboard is created to visualize these metrics for continuous monitoring.
-          </p>
-          <SlideShow images={[
-            `${BASE_PATH}/financeme/3.png`,
-            `${BASE_PATH}/financeme/8.png`,
-            `${BASE_PATH}/financeme/9.png`,
-            `${BASE_PATH}/financeme/10.png`,
-          ]} />
-        </div>
-      );
-    },
-  },
   { // 03. Portfolio project
-    id: "portfolio",
+    id: "3",
     category: "Portfolio",
     title: "My Portfolio",
     src: "/assets/projects-screenshots/myportfolio/landing.png",
     screenshots: ["assets/projects-screenshots/myportfolio/landing.png"],
     live: "https://portfolio-me-kappa-bay.vercel.app/",
-    github: "https://github.com/Abhiz2411/3D-interactive-portfolio",
+    github: "https://github.com/amey0307/portfolio-me",
     skills: {
       frontend: [
         PROJECT_SKILLS.ts,
@@ -498,48 +472,14 @@ const projects: Project[] = [
       );
     },
   },
-  { // 04. Smart parking assitant
-    id: "smartparkingassitant",
-    category: "IoT",
-    title: "Smart Parking Assistant",
-    src: "/assets/projects-screenshots/smartparkingassitant/01.jpeg",
-    screenshots: ["01.jpeg", "03.png"],
-    live: "https://github.com/Abhiz2411/smart-parking-assistant",
-    github: "https://github.com/Abhiz2411/smart-parking-assistant",
-    skills: {
-      frontend: [PROJECT_SKILLS.python],
-      backend: [PROJECT_SKILLS.cplusplus, PROJECT_SKILLS.arduino],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            Transform parking with the Smart Parking Assistant, an IoT marvel powered by Arduino
-            and IR sensors to detect and recommend the best spots in real-time. Enjoy a sleek GUI
-            that visualizes availability and an intelligent system for quick, optimal decisions.
-            Built to adapt with customizable hardware and Python-powered software for seamless
-            integration. Say goodbye to parking woes and hello to smarter space utilization!
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/smartparkingassitant/01.jpeg`,
-              `${BASE_PATH}/smartparkingassitant/03.png`,
-              `${BASE_PATH}/smartparkingassitant/04.jpg`,
-            ]}
-          />
-        </div>
-      );
-    },
-  },
-  { // 05. Smart Job Tracker project
-    id: "smartjobtracker",
+  { // 05. Time Tracker Chrome Extension
+    id: "5",
     category: "Full stack",
-    title: "Smart Job Tracker",
-    src: "/assets/projects-screenshots/smartjobtracker/02.png",
+    title: "Time Tracker Chrome Extension",
+    src: "/assets/projects-screenshots/time-tracker/thumbnail.png",
     screenshots: ["01.png", "02.png", "03.png", "04.png", "05.png", "06.png", "07.png"],
-    live: "https://job-tracker-application-eight.vercel.app/",
-    github: "https://github.com/Abhiz2411/Job-tracker-application",
+    live: "#",
+    github: "#",
     skills: {
       frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
       backend: [PROJECT_SKILLS.firebase],
@@ -548,36 +488,61 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono ">
-            Track your job applications effortlessly with a sleek, dark-themed app that lets you
-            manage, filter, and visualize your job search. Organize your applications with a
-            Kanban board, monitor progress through status updates, and store everything securely.
-            Enjoy seamless access across devices with a responsive design and email reminders for
-            interviews. A smarter, more intuitive way to stay on top of your job hunt!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A dolores error assumenda explicabo id sapiente blanditiis, deserunt cum qui! Unde esse ratione nam quasi voluptatibus rerum aliquid recusandae distinctio, dolorem nobis facere aut incidunt doloribus eum rem numquam tempora dolores fugiat maiores! Minus itaque nam maiores porro exercitationem eos consequuntur!
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow
             images={[
-              `${BASE_PATH}/smartjobtracker/01.png`,
-              `${BASE_PATH}/smartjobtracker/02.png`,
-              `${BASE_PATH}/smartjobtracker/03.png`,
-              `${BASE_PATH}/smartjobtracker/04.png`,
-              `${BASE_PATH}/smartjobtracker/05.png`,
-              `${BASE_PATH}/smartjobtracker/06.png`,
-              `${BASE_PATH}/smartjobtracker/07.png`,
+              `${BASE_PATH}/placeholder.png`,
+              `${BASE_PATH}/placeholder.png`,
             ]}
           />
         </div>
       );
     },
   },
-  { // 06. Savinder Puri portfolio project
-    id: "savinderpurisportfolio",
+  // { // 04. AI Resume Builder project
+  //   id: "4",
+  //   category: "IoT",
+  //   title: "AI Resume Builder",
+  //   src: "/assets/projects-screenshots/placeholder.png",
+  //   screenshots: ["01.jpeg", "03.png"],
+  //   live: "https://github.com/Abhiz2411/smart-parking-assistant",
+  //   github: "https://github.com/Abhiz2411/smart-parking-assistant",
+  //   skills: {
+  //     frontend: [PROJECT_SKILLS.python],
+  //     backend: [PROJECT_SKILLS.cplusplus, PROJECT_SKILLS.arduino],
+  //   },
+  //   get content() {
+  //     return (
+  //       <div>
+  //         <TypographyP className="font-mono ">
+  //           Transform parking with the Smart Parking Assistant, an IoT marvel powered by Arduino
+  //           and IR sensors to detect and recommend the best spots in real-time. Enjoy a sleek GUI
+  //           that visualizes availability and an intelligent system for quick, optimal decisions.
+  //           Built to adapt with customizable hardware and Python-powered software for seamless
+  //           integration. Say goodbye to parking woes and hello to smarter space utilization!
+  //         </TypographyP>
+  //         <ProjectsLinks live={this.live} repo={this.github} />
+  //         <SlideShow
+  //           images={[
+  //             `${BASE_PATH}/smartparkingassitant/01.jpeg`,
+  //             `${BASE_PATH}/smartparkingassitant/03.png`,
+  //             `${BASE_PATH}/smartparkingassitant/04.jpg`,
+  //           ]}
+  //         />
+  //       </div>
+  //     );
+  //   },
+  // },
+  { // 06. Shipping Prediction for E-commerce project
+    id: "6",
     category: "Web Development",
-    title: "Savinder Puri Portfolio",
-    src: "/assets/projects-screenshots/savinderpuriportfolio/01.png",
+    title: "Shipping Prediction for E-commerce",
+    src: "/assets/projects-screenshots/shipping-pred/thumbnail.png",
     screenshots: ["01.png", "02.png", "03.png", "04.png", "05.png"],
-    live: "https://savinder-puri.vercel.app/",
-    github: "https://github.com/Abhiz2411/savinder-puri",
+    live: "#",
+    github: "#",
     skills: {
       frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
       backend: [],
@@ -586,20 +551,42 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono ">
-            Step into the digital world of Savinder Puri, the beloved DevOps guru and Spiritual
-            Alchemist, with this responsive portfolio website. 🌐✨ Explore his inspiring journey,
-            milestones, and life-changing services blending tech and spirituality. Built with
-            modern tools like React and TypeScript, it’s a heartfelt tribute to a mentor who
-            transforms lives. 💻🕊️ Crafted with ❤️ by Abhijit Zende! 🚀
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat, facere laudantium officiis assumenda saepe aut cumque porro. Soluta inventore voluptas delectus ipsa voluptatum totam maxime amet assumenda dolorum, atque aliquam fugiat esse earum quae sit eum vitae magni ratione alias officia repellendus iste. Adipisci temporibus sequi voluptates porro, sint rem ut, molestias quod quos, quibusdam amet laborum eaque quae nulla.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow
             images={[
-              `${BASE_PATH}/savinderpuriportfolio/01.png`,
-              `${BASE_PATH}/savinderpuriportfolio/02.png`,
-              `${BASE_PATH}/savinderpuriportfolio/03.png`,
-              `${BASE_PATH}/savinderpuriportfolio/04.png`,
-              `${BASE_PATH}/savinderpuriportfolio/05.png`,
+              `${BASE_PATH}/placeholder.png`,
+              `${BASE_PATH}/placeholder.png`,
+            ]}
+          />
+        </div>
+      );
+    },
+  },
+  { // 06. Blog Application project
+    id: "7",
+    category: "Web Development",
+    title: "Full Stack Blog Application",
+    src: "/assets/projects-screenshots/full-stack-blog/thumbnail.jpg",
+    screenshots: [],
+    live: "#",
+    github: "#",
+    skills: {
+      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
+      backend: [PROJECT_SKILLS.node, PROJECT_SKILLS.express, PROJECT_SKILLS.mongo],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat, facere laudantium officiis assumenda saepe aut cumque porro. Soluta inventore voluptas delectus ipsa voluptatum totam maxime amet assumenda dolorum, atque aliquam fugiat esse earum quae sit eum vitae magni ratione alias officia repellendus iste. Adipisci temporibus sequi voluptates porro, sint rem ut, molestias quod quos, quibusdam amet laborum eaque quae nulla.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <SlideShow
+            images={[
+              `${BASE_PATH}/placeholder.png`,
+              `${BASE_PATH}/placeholder.png`,
             ]}
           />
         </div>
