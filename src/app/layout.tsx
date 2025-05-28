@@ -66,7 +66,7 @@ export default function RootLayout({
         ></Script>
         {/* <Analytics /> */}
       </head>
-      <body>
+      <body className="overflow-x-hidden w-full max-w-full">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

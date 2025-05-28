@@ -29,7 +29,7 @@ const ProjectsSection = () => {
           Projects
         </h2>
       </Link>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 backdrop-blur-sm rounded-lg">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 backdrop-blur-sm rounded-lg">
         {projects.map((project, index) => (
           <Modall key={project.src} project={project} />
         ))}
@@ -43,11 +43,11 @@ const Modall = ({ project }: { project: Project }) => {
       <Modal>
         <ModalTrigger className="bg-transparent flex justify-center group/modal-btn ">
           <div
-            className="relative w-[400px] h-auto rounded-lg overflow-hidden perspective-dramatic"
-            style={{ aspectRatio: "3/3" }}
+            className="relative w-[500px] h-auto rounded-lg overflow-hidden"
+            style={{ aspectRatio: "3/2.8" }}
           >
             <Image
-              className="absolute w-full h-full top-0 left-0 hover:scale-[1.05] rotate-x-0 translate-z-12 transition-all object-cover"
+              className="absolute w-full h-full top-0 left-0 hover:scale-[1.05] transition-all object-cover"
               src={project.src}
               alt={project.title}
               width={900}
@@ -56,14 +56,14 @@ const Modall = ({ project }: { project: Project }) => {
             <div className="absolute w-full h-1/2 bottom-0 left-0 bg-gradient-to-t from-black via-black/85 to-transparent pointer-events-none">
               <div className="flex flex-col h-full items-start justify-end p-6">
                 <div className="text-lg text-left">{project.title}</div>
-                <div className="text-xs bg-white text-black rounded-lg w-fit px-2">
+                <div className="text-xs bg-white text-black rounded-lg w-fit px-2 hidden lg:block">
                   {project.category}
                 </div>
               </div>
             </div>
           </div>
         </ModalTrigger>
-        <ModalBody className="md:max-w-4xl md:max-h-[80%] overflow-auto">
+        <ModalBody className="flex items-center justify-center min-h-screen p-2">
           <SmoothScroll isInsideModal={true}>
             <ModalContent>
               <ProjectContents project={project} />
@@ -88,12 +88,12 @@ export default ProjectsSection;
 
 const ProjectContents = ({ project }: { project: Project }) => {
   return (
-    <>
-      <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
+    <div className="w-full max-w-full max-h-[65vh] sm:max-h-[70vh] md:max-h-[75vh] overflow-y-auto px-2 box-border">
+      <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8 mx-auto">
         {project.title}
       </h4>
-      <div className="flex flex-col md:flex-row md:justify-evenly max-w-screen overflow-hidden md:overflow-visible">
-        <div className="flex flex-row md:flex-col-reverse justify-center items-center gap-2 text-3xl mb-8">
+      <div className="flex flex-col md:flex-row md:justify-evenly max-w-full md:overflow-visible">
+        <div className="flex flex-col md:flex-col-reverse justify-center items-center gap-2 text-3xl mb-8">
           <p className="text-sm mt-1 text-neutral-600 dark:text-neutral-500">
             Frontend
           </p>
@@ -102,7 +102,7 @@ const ProjectContents = ({ project }: { project: Project }) => {
           )}
         </div>
         {project.skills.backend?.length > 0 && (
-          <div className="flex flex-row md:flex-col-reverse justify-center items-center gap-2 text-3xl mb-8">
+          <div className="flex flex-col md:flex-col-reverse justify-center items-center gap-2 text-3xl mb-8">
             <p className="text-sm mt-1 text-neutral-600 dark:text-neutral-500">
               Backend
             </p>
@@ -110,36 +110,10 @@ const ProjectContents = ({ project }: { project: Project }) => {
           </div>
         )}
       </div>
-      {/* <div className="flex justify-center items-center">
-        {project.screenshots.map((image, idx) => (
-          <motion.div
-            key={"images" + idx}
-            style={{
-              rotate: Math.random() * 20 - 10,
-            }}
-            whileHover={{
-              scale: 1.1,
-              rotate: 0,
-              zIndex: 100,
-            }}
-            whileTap={{
-              scale: 1.1,
-              rotate: 0,
-              zIndex: 100,
-            }}
-            className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden"
-          >
-            <Image
-              src={`${project.src.split("1.png")[0]}${image}`}
-              alt="screenshots"
-              width="500"
-              height="500"
-              className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
-            />
-          </motion.div>
-        ))}
-      </div> */}
-      {project.content}
-    </>
+      <div className="max-w-full text-sm md:text-lg">
+        {project.content}
+      </div>
+    </div>
   );
 };
+

@@ -1,5 +1,5 @@
 const config = {
-  title: "Amey Tripathi | DevOps Enthusiast",
+  title: "Amey Tripathi",
   description: {
     long: "Explore the portfolio of Amey, a Computer Science Engineer with 2.5 year experience in Devlopment, DevOps & Database management with hands-on experience in deploying & automating workflows, & collaborating with foreign clients. Strong analytical skills, effective communication, and a team-oriented approach to driving process improvements and delivering results.",
     short:
@@ -26,7 +26,7 @@ const config = {
   ],
   author: "Amey Tripathi",
   email: "ameytrips0307@gmail.com",
-  site: "https://abhijitzende.com", //change
+  site: "https://ameytripathi.live",
 
   get ogImg() {
     return this.site + "/assets/seo/og-image.png";

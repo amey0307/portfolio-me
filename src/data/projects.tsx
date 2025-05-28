@@ -501,40 +501,6 @@ const projects: Project[] = [
       );
     },
   },
-  // { // 04. AI Resume Builder project
-  //   id: "4",
-  //   category: "IoT",
-  //   title: "AI Resume Builder",
-  //   src: "/assets/projects-screenshots/placeholder.png",
-  //   screenshots: ["01.jpeg", "03.png"],
-  //   live: "https://github.com/Abhiz2411/smart-parking-assistant",
-  //   github: "https://github.com/Abhiz2411/smart-parking-assistant",
-  //   skills: {
-  //     frontend: [PROJECT_SKILLS.python],
-  //     backend: [PROJECT_SKILLS.cplusplus, PROJECT_SKILLS.arduino],
-  //   },
-  //   get content() {
-  //     return (
-  //       <div>
-  //         <TypographyP className="font-mono ">
-  //           Transform parking with the Smart Parking Assistant, an IoT marvel powered by Arduino
-  //           and IR sensors to detect and recommend the best spots in real-time. Enjoy a sleek GUI
-  //           that visualizes availability and an intelligent system for quick, optimal decisions.
-  //           Built to adapt with customizable hardware and Python-powered software for seamless
-  //           integration. Say goodbye to parking woes and hello to smarter space utilization!
-  //         </TypographyP>
-  //         <ProjectsLinks live={this.live} repo={this.github} />
-  //         <SlideShow
-  //           images={[
-  //             `${BASE_PATH}/smartparkingassitant/01.jpeg`,
-  //             `${BASE_PATH}/smartparkingassitant/03.png`,
-  //             `${BASE_PATH}/smartparkingassitant/04.jpg`,
-  //           ]}
-  //         />
-  //       </div>
-  //     );
-  //   },
-  // },
   { // 06. Shipping Prediction for E-commerce project
     id: "6",
     category: "Web Development",
@@ -564,7 +530,7 @@ const projects: Project[] = [
       );
     },
   },
-  { // 06. Blog Application project
+  { // 07. Blog Application project
     id: "7",
     category: "Web Development",
     title: "Full Stack Blog Application",
